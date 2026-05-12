@@ -1,0 +1,158 @@
+header, nav, main, footer { display: block; }
+* {
+	box-sizing: border-box;
+}
+body { 	background-image: url("../images/background.jpg");
+		font-family: Garamond, serif, bold;
+} /*background setup*/
+#wrapper { width: 100%;
+           margin: auto;
+		   background-color: #FFFFE0;
+		   color: #330000;
+		   box-shadow: 5px 5px 5px #000000;
+}
+/*sidebar code*/
+header { 
+		background-size: contain;
+		 background-color: #ffe8f6;
+		 background-image: url(../images/small-logo.jpg);
+		 background-repeat: no-repeat;
+		 padding: 20px;
+		 text-align: center;
+}
+		/*logo and header coding*/
+h1 { font-family: 'Brush Script MT', cursive;
+		font-size: 2.5em;
+		text-shadow: 3px 3px 3px #90745D;
+		margin: 0;
+} /*business name header*/
+nav { background-color: #FFFFE0;
+		width: 100%;
+}
+nav ul { display: flex;
+	flex-direction: column;
+	list-style-type: none;
+	margin: 0;
+	padding: 10px;
+	text-align: center;
+	 }
+nav li { padding: 10px 0;
+       font-weight: bold;
+}
+nav a { text-decoration: none; }
+nav a:link { color: #a9a9a9; }
+nav a:visited{ color: #a9a9a9; }
+nav a:hover { color: #808080; }
+/*navigation bar to other pages*/
+
+main { background-color: #FFF0F5;
+          
+          padding: 20px;   
+		  min-height: 300px;
+} /*body paragraph section*/
+img, .roomimage {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 10px auto;
+}
+#house{
+	background-image: url(../images/hellokitty-smaller.jpg);
+}
+
+#nicoledoll{
+	background-image: url(../images/nicole-face.png);
+	background-repeat: no-repeat;
+	height: 233px;
+	width: 248px;
+}
+#meetgreet{
+	background-image: url(../images/meet-small.jpg);
+}
+#welcome{
+	background-image: url(../images/welcome_small.jpg)
+}
+#house, #meetgreet, #welcome {
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+}
+/*image location*/
+footer { background-color: #FDF5E6;
+       padding: 20px;
+       text-align: center;
+	   font-size: small;
+	   font-style: italic;
+}
+/*seperating the footer info from main paragraphs info*/
+
+/*form style*/
+form {
+	width: 100%;
+	display: grid;
+	grid-gap: 1em;
+	grid-template-columns: 1fr;
+	}
+/*media query for mobile*/
+@media (min-width: 768px) {
+	#wrapper {
+		width: 95%;
+		max-width: 1100px;
+	}
+
+	h1 {
+		text-align: center;
+		font-size: 4em;
+	}
+
+	#content-area {
+        display: flex;
+    }
+
+    nav {
+        width: 200px;
+        flex-shrink: 0; /* prevents nav from squishing */
+    }
+	#house {
+		background-image: url(../images/hellokitty-exterior.jpg);
+		height: 500px;
+		width: 800px;
+	}
+
+	#nicoledoll {
+		background-image: url(../images/nicole-dollanganger.jpg);
+		height: 600px;
+		width: 690px;
+	}
+	#meetgreet {
+		background-image: url(../images/meet-greet.jpg);
+		height: 500px;
+		width: 600px;
+	}
+	#welcome {
+		background-image: url(../images/hellokitty_welcome.jpg);
+		height: 300px;
+		width: 500px;
+	}
+
+    main {
+        flex-grow: 1;
+    }
+
+    form {
+        width: 60%;
+        grid-template-columns: 6em 1fr; /* side-by-side labels */
+	}
+
+}
+	/*media query for large screens*/
+@media (min-width: 1024px) {
+    header {
+        background-image: url(../images/logo1.jpg);
+        background-position: left center;
+        padding-left: 120px;
+        text-align: left;
+}
+}
